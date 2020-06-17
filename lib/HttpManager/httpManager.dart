@@ -50,8 +50,7 @@ class DioUtils {
     method = method ?? ReqMethod.GET;
 
     /// restful 请求处理
-    /// /gysw/search/hist/:user_id        user_id=27
-    /// 最终生成 url 为     /gysw/search/hist/27
+
     data.forEach((key, value) {
       if (url.indexOf(key) != -1) {
         url = url.replaceAll(':$key', value.toString());
