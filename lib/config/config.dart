@@ -1,11 +1,14 @@
-import '../enum/env.dart';
 
-class Config {
+enum Env {
+  PROD,
+  DEVELOP,
+  PREPUB,
+}
+
+class Config  {
   static Env env;
 
   static String get apiHost {
-    print(111);
-    print(env);
     switch (env) {
       case Env.PROD:
         return "**";

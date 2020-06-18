@@ -1,8 +1,9 @@
-import '../main.dart';
+import 'package:flutter/material.dart';
 import '../config/config.dart';
-import '../enum/env.dart';
+import '../main.dart';
 
 void main() {
   Config.env = Env.DEVELOP;
-
+  // 实例化应用
+  runApp(new MyApp());
 }
