@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
-import 'package:my_app/ProgressRoute/progressRoute.dart';
-import '../Tapbox/tapbox.dart';
-import '../FormRoute/formRoute.dart';
-import '../ProgressRoute/progressRoute.dart';
-import '../MyDrawer/myDrawer.dart';
-import '../SingleChildScrollViewRoute/SingleChildScrollViewRoute.dart';
-import '../InfiniteListView/infiniteList.dart';
+import '../progressRoute/progressRoute.dart';
+import '../tapbox/tapbox.dart';
+import '../formRoute/formRoute.dart';
+import '../progressRoute/progressRoute.dart';
+import '../myDrawer/myDrawer.dart';
+import '../singleChildScrollViewRoute/SingleChildScrollViewRoute.dart';
+import '../infiniteListView/infiniteList.dart';
 
 class TutorialHome extends StatefulWidget {
   @override

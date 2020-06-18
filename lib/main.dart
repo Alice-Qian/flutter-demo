@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import './Loading/loading.dart';
-import './TutorialHome/tutorialHome.dart';
+import './views/loading/loading.dart';
+import './views/tutorialHome/tutorialHome.dart';
 
 void main() {
   // debugPaintSizeEnabled = true;

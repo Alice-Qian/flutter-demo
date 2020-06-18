@@ -1,22 +1,20 @@
-enum Env {
-  PROD,
-  DEVELOP,
-  PREPUB,
-}
+import '../enum/env.dart';
 
 class Config {
   static Env env;
 
   static String get apiHost {
+    print(111);
+    print(env);
     switch (env) {
       case Env.PROD:
-        return "https://www.baidu.com";
+        return "**";
       case Env.PREPUB:
-        return "";
+        return "**";
       case Env.DEVELOP:
-        return "";
+        return "**";
       default:
-        return "";
+        return "**";
     }
   }
 }

@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'dart:async';
-import './config.dart';
-import './reqMethod.dart';
+import '../Config/config.dart';
+import '../enum/reqMethod.dart';
 
 /*
  * 封装 restful 请求
