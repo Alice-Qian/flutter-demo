@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../themeRoute/themeRoute.dart';
 import '../httpRoute/httpRoute.dart';
+import '../scaleAnimation/scaleAnimation.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key key}) : super(key: key);
@@ -55,6 +56,17 @@ class MyDrawer extends StatelessWidget {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
                         return new HttpRoute();
+                      }))
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.settings),
+                    title: const Text('动画演示'),
+                    subtitle: const Text("animation"),
+                    onTap: () => {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return new ScaleAnimation();
                       }))
                     },
                   ),
