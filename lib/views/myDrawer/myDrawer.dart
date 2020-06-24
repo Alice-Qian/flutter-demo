@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/views/heroAnimation/heroAnimation.dart';
 import '../themeRoute/themeRoute.dart';
 import '../httpRoute/httpRoute.dart';
 import '../scaleAnimation/scaleAnimation.dart';
@@ -67,6 +68,17 @@ class MyDrawer extends StatelessWidget {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
                         return new ScaleAnimation();
+                      }))
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.settings),
+                    title: const Text('Hero动画'),
+                    subtitle: const Text("animation"),
+                    onTap: () => {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return new HeroAnimation();
                       }))
                     },
                   ),
