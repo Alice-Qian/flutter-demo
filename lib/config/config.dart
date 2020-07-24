@@ -11,13 +11,13 @@ class Config  {
   static String get apiHost {
     switch (env) {
       case Env.PROD:
-        return "**";
+        return "https://groot.24che.com";
       case Env.PREPUB:
-        return "**";
+        return "https://groot.24che.com";
       case Env.DEVELOP:
-        return "**";
+        return "https://groot.24che.com";
       default:
-        return "**";
+        return "https://groot.24che.com";
     }
   }
 }

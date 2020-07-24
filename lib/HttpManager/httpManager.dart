@@ -17,11 +17,11 @@ class DioUtils {
   /// global dio object
   static Dio dio;
 
-  // default options
+  /// default options
   static const int _CONNECT_TIMEOUT = 10000;
   static const int _RECEIVE_TIMEOUT = 3000;
 
-  // 创建 dio 实例对象
+  /// 创建 dio 实例对象
   static Dio createInstance() {
     if (dio == null) {
       /// 全局属性：请求前缀、连接超时时间、响应超时时间
@@ -45,7 +45,8 @@ class DioUtils {
   }
 
   /// request method
-  static Future request(String url, {data, method}) async {
+  static Future request(String url,
+      {Map<String, dynamic> data, ReqMethod method}) async {
     data = data ?? {};
     method = method ?? ReqMethod.GET;
 
@@ -58,13 +59,14 @@ class DioUtils {
     });
 
     Dio dio = createInstance();
-    List<dynamic> result;
+    var result;
 
     try {
       Response response = await dio.request(url,
-          data: data, options: new Options(method: ReqMethodValue[method]));
+          queryParameters: data,
+          options: new Options(method: ReqMethodValue[method]));
 
-      var responseData = response.data;
+      Map responseData = response.data;
 
       if (responseData['code'] == '200') {
         result = responseData['data'];
